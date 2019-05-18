@@ -3,5 +3,5 @@ type Obj = {
 }
 
 export default function shallowEqual(objA: Obj, objB: Obj): boolean {
-  return Object.keys(objA).some((key) => (objA[key] !== objB[key]))
-}
+  return !Object.keys(objA).some((key) => (objA[key] !== objB[key]))
+} 
